@@ -163,7 +163,7 @@ transform: scale(1.3);
   flex-direction: column;
   padding: 5%;
   justify-content: space-evenly;
-  min-height: 85vh;
+  min-height: 95vh;
 }
 
 .image-container {
@@ -173,7 +173,7 @@ order:1;
 }
 
 .circle-3 {
-  top: 90%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%,-50%) scale(2);
 }

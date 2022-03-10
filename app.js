@@ -23,11 +23,13 @@ const leaveAnimation = (currentElement, done) => {
 const enterAnimation = (currentElement, done, gradient) => {
   const product = currentElement.querySelector(".image-container")
   const text = currentElement.querySelector(".showcase-text")
-  const circles = currentElement.querySelector(".circle")
+  const circles = currentElement.querySelectorAll(".circle")
   const arrow = currentElement.querySelector(".showcase-arrow")
 
   return (
-    timelineEnter.fromTo(arrow, { opacity: 0, y: 50 }, { opacity: 1, y: 0, onComplete: done }, "<"),
+    timelineEnter.fromTo(arrow,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, onComplete: done }),
     timelineEnter.to('body', { background: gradient }, "<"),
     timelineEnter.fromTo(product, { y: -100, opacity: 0, }, { y: 0, opacity: 1 }, '<'),
     timelineEnter.fromTo(text, { opacity: 0, y: 100 }, { opacity: 1, y: 0 }, '<'),
@@ -71,7 +73,7 @@ barba.init({
       }
     },
     {
-      name: "product-transistion",
+      name: "product-transition",
       sync: true,
       from: { namespace: ["handbag", "product"] },
       to: { namespace: ["product", "handbag"] },
